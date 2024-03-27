@@ -13,6 +13,6 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Run kubesec scanner
-        uses: controlplaneio/kubesec-action@latest
+        uses: kubesec/kubesec:v2
         with:
           input: .kubesec/demo.yml
