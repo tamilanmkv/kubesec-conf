@@ -1,4 +1,4 @@
-name: Test Kubesec 
+name: Test Kubesec
 
 on:
   push:
@@ -8,11 +8,11 @@ jobs:
   lint:
     name: Lint
     runs-on: ubuntu-20.04
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-
-      - name: Run kubesec scanner
-        uses: kubesec/kubesec:v2
-        with:
-          input: .kubesec/demo.yml
+      
+      - name: Lint code
+        uses: kubesec/kubesec@master
+        run: kubesec scan .kubsec/kubesec.yml
