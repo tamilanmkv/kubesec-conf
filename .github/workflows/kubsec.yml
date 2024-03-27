@@ -15,9 +15,9 @@ jobs:
 
       - name: Kubesec Download
         run: |
-          wget https://github.com/kubesec/kubesec/releases/download/v0.17.0/kubesec-linux-amd64
-          chmod +x kubesec-linux-amd64
-          sudo mv kubesec-linux-amd64 /usr/local/bin/kubesec
+          wget https://github.com/controlplaneio/kubesec/releases/download/v2.14.0/kubesec_linux_amd64.tar.gz
+          tar -xvf kubesec_linux_amd64.tar.gz
+          chmod +x kubesec
 
       - name: Kubesec scan
         run: |
