@@ -23,4 +23,4 @@ jobs:
 
       - name: Kubesec scan
         run: |
-          kubesec .kubsec/demo.yml
+          kubesec kubse/demo.yml
