@@ -12,8 +12,13 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-      
-      - name: Lint code
-        uses: kubesec/kubesec@master
-        with:
-          path: .kubsec/demo.yml
+
+      - name: Kubesec Download
+        run: |
+          wget https://github.com/kubesec/kubesec/releases/download/v0.17.0/kubesec-linux-amd64
+          chmod +x kubesec-linux-amd64
+          sudo mv kubesec-linux-amd64 /usr/local/bin/kubesec
+
+      - name: Kubesec scan
+        run: |
+          kubesec .kubsec/demo.yml
