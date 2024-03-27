@@ -15,4 +15,5 @@ jobs:
       
       - name: Lint code
         uses: kubesec/kubesec@master
-        run: kubesec scan .kubsec/kubesec.yml
+        with:
+          path: .kubsec/demo.yml
