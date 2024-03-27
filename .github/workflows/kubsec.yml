@@ -19,6 +19,7 @@ jobs:
           tar -xvf kubesec_linux_amd64.tar.gz
           chmod +x kubesec
           sudo mv kubesec /usr/local/bin
+          ls
 
       - name: Kubesec scan
         run: |
