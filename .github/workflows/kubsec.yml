@@ -22,8 +22,12 @@ jobs:
           ls
 
       - name: Kubesec scan
+        continue-on-error: true
         run: |
           kubesec scan kubse/demo.yml --format json
+          if [ $? -ne 0 ]; then
+            exit 1
+          fi
 
       - name: Kubesec report
         run: |
