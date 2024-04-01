@@ -23,6 +23,6 @@ jobs:
 
       - name: Kubesec scan
         run: |
-          kubesec scan kubse/demo.yml --format json > kubesec.json
+          kubesec scan kubse/demo.yml  > kubesec.json
           cat kubesec.json
           exit 0
