@@ -29,18 +29,6 @@ jobs:
             exit 1
           fi
 
-      - name: Kubesec report
-        run: |
-          kubesec report kubse/demo.yml
-
-      - name: Kubesec report html
-        run: |
-          kubesec report kubse/demo.yml --format html
-
-      - name: Kubesec report json
-        run: |
-          kubesec report kubse/demo.yml --format json > report.json
-
       - name: Read report
         run: |
           cat report.json
