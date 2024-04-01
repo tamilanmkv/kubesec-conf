@@ -31,7 +31,5 @@ jobs:
 
       - name: Read report
         run: |
-          cat report.json
-
-
+          python3 kubse/main.py
 
